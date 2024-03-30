@@ -27,11 +27,11 @@
         let err = document.getElementsByClassName("error")[0]
         if(email.length==0){
             err.innerHTML="<i>*Enter the email address*</i>"
-            return false
+           
         }
         else if(email!="chandwanibrothers3@gmail.com"){
             err.innerHTML="Enter the valid email address"
-            return false
+        
         }
         else{
             err.innerHTML=""
@@ -42,11 +42,11 @@
         let redirect = document.querySelector(".submit")
         if(pwd.length==0){
             perr.innerHTML="<i>*Enter the password*</i>"
-            return false
+          
         }
         else if(pwd!="hello"){
             perr.innerHTML="Invalid password"
-            return false
+        
         }
         else{
             err.innerHTML=""
