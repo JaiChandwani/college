@@ -12,12 +12,12 @@
 <body class="log">
     <div class="container">
         <h1 class="heading">Log In</h1>
-        <form action="" onsubmit=""  method="post" >
+        <form action="" onsubmit="return login() ,redi()"  method="post" >
             <input class="mail" type="text" placeholder="email">
             <span style="color: red;" class="error"></span>
             <input type="password" class="password" placeholder="password">
             <span style="color: red;" class="error"></span>
-            <button style="color:white; text-decoration: none;" onclick="return login() ,redi()" class="submit">Login</button>
+            <button style="color:white; text-decoration: none;" onclick="SubmitEvent" class="submit">Login</button>
             <button style="color:white; text-decoration: none;">Cancel</button>
         </form>
     </div>
@@ -27,11 +27,11 @@
         let err = document.getElementsByClassName("error")[0]
         if(email.length==0){
             err.innerHTML="<i>*Enter the email address*</i>"
-           
+            return false
         }
         else if(email!="chandwanibrothers3@gmail.com"){
             err.innerHTML="Enter the valid email address"
-        
+         return false
         }
         else{
             err.innerHTML=""
@@ -42,11 +42,11 @@
         let redirect = document.querySelector(".submit")
         if(pwd.length==0){
             perr.innerHTML="<i>*Enter the password*</i>"
-          
+           return false
         }
         else if(pwd!="hello"){
             perr.innerHTML="Invalid password"
-        
+        return false
         }
         else{
             err.innerHTML=""
